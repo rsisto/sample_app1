@@ -221,8 +221,8 @@ describe User do
       end
 
 		
+    end
   end
-  
   describe "relationships" do
 
     before(:each) do
@@ -239,7 +239,7 @@ describe User do
     end
 
     it "should have a following? method" do
-      @user.should respond_to(:following?)
+      @user.should respond_to(:following? )
     end
 
     it "should have a follow! method" do
@@ -265,6 +265,7 @@ describe User do
       @user.unfollow!(@followed)
       @user.should_not be_following(@followed)
     end
+	
     it "should have a reverse_relationships method" do
       @user.should respond_to(:reverse_relationships)
     end
@@ -280,6 +281,7 @@ describe User do
 
 		
   end
+  
 
   
 end
